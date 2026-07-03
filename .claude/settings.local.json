@@ -10,7 +10,8 @@
       "Bash(git init *)",
       "Bash(git add *)",
       "Bash(git commit -m 'feat: Tour du Loiret 2026 — site scrollytelling complet *)",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Bitmap]::FromFile\\(\"C:\\\\Users\\\\charl\\\\projects\\\\personal\\\\tour-du-loiret\\\\Gemini_Generated_Image_fcv56gfcv56gfcv5.png\"\\); Write-Output \"$\\($img.Width\\) x $\\($img.Height\\), format $\\($img.PixelFormat\\)\"; $img.Dispose\\(\\))"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Bitmap]::FromFile\\(\"C:\\\\Users\\\\charl\\\\projects\\\\personal\\\\tour-du-loiret\\\\Gemini_Generated_Image_fcv56gfcv56gfcv5.png\"\\); Write-Output \"$\\($img.Width\\) x $\\($img.Height\\), format $\\($img.PixelFormat\\)\"; $img.Dispose\\(\\))",
+      "Bash(git commit -m 'feat: section Comment venir — marche, moteur thermique, doctrine SNCF *)"
     ]
   }
 }
