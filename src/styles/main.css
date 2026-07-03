@@ -614,6 +614,64 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
 
 .programme dd strong { color: var(--chalk); }
 
+/* Hébergements */
+.lodgings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1040px;
+  width: 100%;
+}
+
+.lodging {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--lodging-color, var(--dossard));
+  transition: transform 0.25s ease;
+}
+
+.lodging:hover { transform: translateY(-4px); }
+
+.lodging__badge {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lodging-color, var(--dossard));
+  margin-bottom: 12px;
+}
+
+.lodging h3 { font-size: 20px; margin-bottom: 12px; }
+
+.lodging__desc { font-size: 14.5px; color: var(--chalk-70); flex: 1; }
+
+.lodging__facts {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--chalk-12);
+}
+
+.lodging__facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  font-size: 12.5px;
+}
+
+.lodging__facts dt {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--chalk-45);
+  padding-top: 2px;
+}
+
+.lodging__facts dd { color: var(--chalk); text-align: right; }
+
+.lodging .btn--ghost { margin-top: 16px; }
+
 /* Inscription */
 .tiers {
   display: grid;
@@ -656,6 +714,14 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
 .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
 
 .btn:active { transform: translateY(0); }
+
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--chalk-45);
+  color: var(--chalk);
+}
+
+.btn--ghost:hover { border-color: var(--dossard); color: var(--dossard); filter: none; }
 
 .confirm { max-width: 1040px; width: 100%; border-color: rgba(232, 255, 60, 0.35); }
 
@@ -740,6 +806,7 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   .stagecards { grid-template-columns: 1fr; }
   .programme { grid-template-columns: 1fr; }
   .tiers { grid-template-columns: 1fr; }
+  .lodgings { grid-template-columns: 1fr; }
 
   /* Bottom-sheet reading position: cards hug the lower half over the map */
   .scroll-col {
