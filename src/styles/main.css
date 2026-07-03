@@ -1,19 +1,19 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   Tour du Loiret — canal-at-dusk
+   Tour du Loiret — palette du badge : marine, crème, or, ciel
    ═══════════════════════════════════════════════════════════════════════ */
 
 :root {
-  --ink: #101816;
-  --canal: #1e4d43;
-  --chalk: #f2efe6;
-  --dossard: #e8ff3c;
-  --stage1: #e8ff3c;
-  --stage2: #ff7a45;
-  --stage3: #6fd1ff;
-  --chalk-12: rgba(242, 239, 230, 0.12);
-  --chalk-45: rgba(242, 239, 230, 0.45);
-  --chalk-70: rgba(242, 239, 230, 0.7);
-  --card-bg: rgba(16, 24, 22, 0.78);
+  --ink: #0f2138;
+  --canal: #1d3b5a;
+  --chalk: #f1e7d0;
+  --dossard: #e4a93d;
+  --stage1: #e4a93d;
+  --stage2: #de7b3e;
+  --stage3: #77b9e0;
+  --chalk-12: rgba(241, 231, 208, 0.12);
+  --chalk-45: rgba(241, 231, 208, 0.45);
+  --chalk-70: rgba(241, 231, 208, 0.7);
+  --card-bg: rgba(15, 33, 56, 0.8);
   --radius: 14px;
   --font-display: 'Bricolage Grotesque', 'Arial Black', sans-serif;
   --font-body: 'Instrument Sans', system-ui, sans-serif;
@@ -60,7 +60,7 @@ body {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: radial-gradient(115% 90% at 50% 42%, transparent 58%, rgba(16, 24, 22, 0.6) 100%);
+  background: radial-gradient(115% 90% at 50% 42%, transparent 58%, rgba(15, 33, 56, 0.65) 100%);
 }
 
 #confetti {
@@ -82,7 +82,7 @@ main, footer, .site-header { position: relative; z-index: 2; }
   align-items: center;
   height: var(--header-h);
   padding: 0 20px;
-  background: linear-gradient(rgba(16, 24, 22, 0.65), transparent);
+  background: linear-gradient(rgba(15, 33, 56, 0.7), transparent);
 }
 
 .site-header__brand {
@@ -158,10 +158,10 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   width: clamp(104px, 14vw, 148px);
   height: auto;
   margin-bottom: 28px;
-  filter: drop-shadow(0 4px 24px rgba(16, 24, 22, 0.6));
+  filter: drop-shadow(0 4px 24px rgba(15, 33, 56, 0.65));
 }
 
-.hero__eyebrow { color: var(--chalk); text-shadow: 0 1px 12px rgba(16, 24, 22, 0.8); }
+.hero__eyebrow { color: var(--chalk); text-shadow: 0 1px 12px rgba(15, 33, 56, 0.85); }
 
 .hero__title {
   font-size: clamp(52px, 12.5vw, 152px);
@@ -169,7 +169,7 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   letter-spacing: -0.03em;
   text-transform: uppercase;
   line-height: 0.92;
-  text-shadow: 0 4px 40px rgba(16, 24, 22, 0.75);
+  text-shadow: 0 4px 40px rgba(15, 33, 56, 0.8);
 }
 
 .hero__title span { color: var(--dossard); }
@@ -180,7 +180,7 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   font-weight: 500;
   font-style: italic;
   color: var(--chalk);
-  text-shadow: 0 1px 12px rgba(16, 24, 22, 0.8);
+  text-shadow: 0 1px 12px rgba(15, 33, 56, 0.85);
 }
 
 .hero__strip {
@@ -280,13 +280,13 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   border: 1px solid var(--chalk-12);
   border-top: 3px solid var(--stage-color, var(--dossard));
   border-radius: 10px;
-  background: rgba(16, 24, 22, 0.5);
+  background: rgba(15, 33, 56, 0.55);
   color: var(--chalk);
   text-decoration: none;
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
-.stagecard:hover { transform: translateY(-3px); background: rgba(30, 77, 67, 0.45); }
+.stagecard:hover { transform: translateY(-3px); background: rgba(35, 66, 100, 0.5); }
 
 .stagecard .eyebrow { color: var(--stage-color, var(--dossard)); margin-bottom: 5px; font-size: 10px; }
 
@@ -415,10 +415,26 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   background: var(--chip-color, var(--dossard));
 }
 
-.chip--patrimoine { --chip-color: #6fd1ff; }
-.chip--ravitaillement { --chip-color: #e8ff3c; }
-.chip--difficulte { --chip-color: #ff7a45; }
-.chip--pointdevue { --chip-color: #7fe0c3; }
+.chip--patrimoine { --chip-color: #77b9e0; }
+.chip--ravitaillement { --chip-color: #e4a93d; }
+.chip--difficulte { --chip-color: #de7b3e; }
+.chip--pointdevue { --chip-color: #6fbfa4; }
+
+.card--poi { --pad-x: 32px; --pad-y: 30px; overflow: hidden; }
+
+.poi-photo {
+  margin: calc(-1 * var(--pad-y)) calc(-1 * var(--pad-x)) 18px;
+  height: 170px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--chalk-12);
+}
+
+.poi-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .card--poi h3 { font-size: 22px; margin-bottom: 8px; }
 .card--poi p { color: var(--chalk-70); font-size: 15px; }
@@ -506,7 +522,7 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
 
 .marker-depart {
   width: 46px; height: 46px;
-  filter: drop-shadow(0 3px 10px rgba(16, 24, 22, 0.7));
+  filter: drop-shadow(0 3px 10px rgba(15, 33, 56, 0.75));
 }
 
 .marker-poi { width: 20px; height: 20px; position: relative; }
@@ -739,6 +755,10 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
   }
 
   .card { padding: 22px 20px; }
+
+  .card--poi { --pad-x: 20px; --pad-y: 22px; }
+
+  .poi-photo { height: 130px; }
 
   .stage-hud {
     margin-left: 14px;

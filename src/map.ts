@@ -47,7 +47,7 @@ const RASTER_FALLBACK: StyleSpecification = {
     },
   },
   layers: [
-    { id: 'bg', type: 'background', paint: { 'background-color': '#101816' } },
+    { id: 'bg', type: 'background', paint: { 'background-color': '#0f2138' } },
     { id: 'carto', type: 'raster', source: 'carto' },
   ],
 };
@@ -55,7 +55,7 @@ const RASTER_FALLBACK: StyleSpecification = {
 const PLAIN_FALLBACK: StyleSpecification = {
   version: 8,
   sources: {},
-  layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#16211e' } }],
+  layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#152c47' } }],
 };
 
 async function resolveStyle(): Promise<StyleSpecification> {
@@ -165,7 +165,7 @@ export class RaceMap {
       m.addLayer({
         id: 'dusk-dim',
         type: 'background',
-        paint: { 'background-color': '#101816', 'background-opacity': 0.55 },
+        paint: { 'background-color': '#0f2138', 'background-opacity': 0.55 },
       });
     }
     for (const s of this.stages) {
@@ -197,9 +197,9 @@ export class RaceMap {
       id: 'rider', type: 'circle', source: 'rider',
       paint: {
         'circle-radius': 7,
-        'circle-color': '#f2efe6',
+        'circle-color': '#f1e7d0',
         'circle-stroke-width': 3,
-        'circle-stroke-color': ['coalesce', ['get', 'color'], '#e8ff3c'] as unknown as string,
+        'circle-stroke-color': ['coalesce', ['get', 'color'], '#e4a93d'] as unknown as string,
       },
     });
   }
@@ -210,13 +210,13 @@ export class RaceMap {
     el.title = 'Grand Départ & Arrivée — Les Brins, Louzouer';
     el.innerHTML = `
       <svg viewBox="0 0 46 46" width="46" height="46" role="img" aria-label="Départ et arrivée">
-        <circle cx="23" cy="23" r="21" fill="#101816" stroke="#f2efe6" stroke-width="2"/>
-        <g fill="#f2efe6">
+        <circle cx="23" cy="23" r="21" fill="#0f2138" stroke="#f1e7d0" stroke-width="2"/>
+        <g fill="#f1e7d0">
           <rect x="14" y="14" width="4.5" height="4.5"/><rect x="23" y="14" width="4.5" height="4.5"/>
           <rect x="18.5" y="18.5" width="4.5" height="4.5"/><rect x="27.5" y="18.5" width="4.5" height="4.5"/>
           <rect x="14" y="23" width="4.5" height="4.5"/><rect x="23" y="23" width="4.5" height="4.5"/>
         </g>
-        <path d="M23 6 L26.5 14.5 L23 12.5 L19.5 14.5 Z" fill="#e8ff3c"/>
+        <path d="M23 6 L26.5 14.5 L23 12.5 L19.5 14.5 Z" fill="#e4a93d"/>
       </svg>`;
     new maplibregl.Marker({ element: el }).setLngLat(this.base).addTo(this.map);
     el.style.transition = 'opacity 0.6s ease';
@@ -229,7 +229,7 @@ export class RaceMap {
     for (const p of pois) {
       const el = document.createElement('div');
       el.className = 'marker-poi';
-      el.style.setProperty('--poi-color', colors[p.stage] ?? '#e8ff3c');
+      el.style.setProperty('--poi-color', colors[p.stage] ?? '#e4a93d');
       const mk = new maplibregl.Marker({ element: el }).setLngLat([p.lon, p.lat]).addTo(this.map);
       this.poiMarkers.set(p.id, mk);
     }

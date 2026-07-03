@@ -12,6 +12,7 @@ import stage1stats from './data/stage1.stats.json';
 import stage2stats from './data/stage2.stats.json';
 import stage3stats from './data/stage3.stats.json';
 import poisData from './data/pois.json';
+import poiImages from './data/poi-images.json';
 import meta from './data/meta.json';
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -33,19 +34,19 @@ interface StageCopy {
 const STAGE_COPY: StageCopy[] = [
   {
     n: 1, name: 'Les Sept Écluses', dayLong: 'Vendredi 28 août', dayShort: 'ven. 28 août',
-    color: '#e8ff3c', croissants: 2,
+    color: '#e4a93d', croissants: 2,
     lede: "La classique des canaux. Par le donjon de Château-Renard et la vallée du Loing jusqu'au chemin de halage de la Scandibérique, pour un demi-tour solennel au pied de l'escalier d'eau de Rogny. Le peloton est prié d'admirer.",
     short: 'Canaux, écluses et boulangeries stratégiques.',
   },
   {
     n: 2, name: 'La Royale du Gâtinais', dayLong: 'Samedi 29 août', dayShort: 'sam. 29 août',
-    color: '#ff7a45', croissants: 3,
+    color: '#de7b3e', croissants: 3,
     lede: "L'étape reine. Abbaye carolingienne, forêt domaniale, la Venise du Gâtinais, puis le canal d'Orléans jusqu'aux douves du château de Bellegarde. Retour par la plaine, vent de face garanti par l'organisation.",
     short: "Cent kilomètres. Le mot « royale » n'est pas négociable.",
   },
   {
     n: 3, name: "La Bosse de l'Ouanne", dayLong: 'Dimanche 30 août', dayShort: 'dim. 30 août',
-    color: '#6fd1ff', croissants: 3,
+    color: '#77b9e0', croissants: 3,
     lede: "Le final. Court mais accidenté : la vallée de l'Ouanne enchaîne les bosses jusqu'à la frontière de l'Yonne. Le règlement parle de moyenne montagne. Le règlement a été rédigé par nous.",
     short: "Des bosses, traitées avec la gravité d'un col hors catégorie.",
   },
@@ -105,15 +106,22 @@ function buildStageSections() {
     section.style.setProperty('--stage-color', copy.color);
     section.setAttribute('aria-label', `Étape ${copy.n} — ${copy.name}`);
 
-    const poiSteps = pois.map((p) => `
+    const poiSteps = pois.map((p) => {
+      const img = (poiImages as Record<string, string | null>)[p.id];
+      const photo = img
+        ? `<figure class="poi-photo"><img src="/${img}" alt="${p.name}" loading="lazy" /></figure>`
+        : '';
+      return `
       <div class="step step--poi" data-action="poi" data-stage="${copy.n}" data-poi="${p.id}" data-lon="${p.lon}" data-lat="${p.lat}" data-km="${p.km.toFixed(2)}">
         <article class="card card--poi">
+          ${photo}
           <span class="${chipClass(p.cat)}">${p.cat}</span>
           <h3>${p.name}</h3>
           <p>${p.copy}</p>
           <span class="poi-km num">PK ${fmtKm(p.km)}</span>
         </article>
-      </div>`).join('');
+      </div>`;
+    }).join('');
 
     section.innerHTML = `
       <div class="stage-hud" aria-hidden="true">
@@ -224,7 +232,7 @@ function sizeConfetti() {
 
 function confettiBurst(x: number, y: number) {
   if (REDUCED) return;
-  const colors = ['#e8ff3c', '#ff7a45', '#6fd1ff', '#f2efe6'];
+  const colors = ['#e4a93d', '#de7b3e', '#77b9e0', '#f1e7d0'];
   for (let i = 0; i < 90; i++) {
     const a = Math.random() * Math.PI * 2;
     const speed = 4 + Math.random() * 9;

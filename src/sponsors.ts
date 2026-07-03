@@ -34,7 +34,7 @@ export const SPONSORS: Sponsor[] = [
         <path d="M30 22 l-4 -6"/><path d="M32 20 l0 -7"/><path d="M34 22 l4 -6"/>
       </g>
       <text x="52" y="32" font-family="Georgia, serif" font-size="16" letter-spacing="2" fill="#e0862c">SAFRAN DU GÂTINAIS</text>
-      <text x="52" y="56" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#f2efe6">Père Robillard, récoltant</text>
+      <text x="52" y="56" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#f1e7d0">Père Robillard, récoltant</text>
     </svg>`,
   },
   {
@@ -42,10 +42,10 @@ export const SPONSORS: Sponsor[] = [
     title: 'Assistance neutre (tracteur)',
     svg: `<svg viewBox="0 0 240 74" role="img" aria-label="Garage Marcel, Louzouer">
       <rect x="12" y="8" width="216" height="58" rx="6" fill="#2b4a75"/>
-      <rect x="16" y="12" width="208" height="50" rx="4" fill="none" stroke="#f2efe6" stroke-width="1.5"/>
-      <text x="120" y="28" text-anchor="middle" font-family="'Arial Narrow', Arial, sans-serif" font-size="12" letter-spacing="8" fill="#f2efe6">GARAGE</text>
+      <rect x="16" y="12" width="208" height="50" rx="4" fill="none" stroke="#f1e7d0" stroke-width="1.5"/>
+      <text x="120" y="28" text-anchor="middle" font-family="'Arial Narrow', Arial, sans-serif" font-size="12" letter-spacing="8" fill="#f1e7d0">GARAGE</text>
       <text x="120" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="21" letter-spacing="3" fill="#e8433c">MARCEL</text>
-      <text x="120" y="60" text-anchor="middle" font-family="'Arial Narrow', Arial, sans-serif" font-size="7.5" letter-spacing="4" fill="#f2efe6">LOUZOUER · DÉPANNAGE TOUTES DISTANCES</text>
+      <text x="120" y="60" text-anchor="middle" font-family="'Arial Narrow', Arial, sans-serif" font-size="7.5" letter-spacing="4" fill="#f1e7d0">LOUZOUER · DÉPANNAGE TOUTES DISTANCES</text>
     </svg>`,
   },
   {
@@ -67,8 +67,8 @@ export const SPONSORS: Sponsor[] = [
     title: 'Village départ & zone technique',
     svg: `<svg viewBox="0 0 240 74" role="img" aria-label="Bar-Tabac de l'Écluse">
       <path d="M30 14 L46 37 L30 60 L14 37 Z" fill="#e8433c"/>
-      <path d="M30 22 L40 37 L30 52 L20 37 Z" fill="none" stroke="#f2efe6" stroke-width="1.5"/>
-      <text x="58" y="34" font-family="'Arial Narrow', Arial, sans-serif" font-weight="bold" font-size="20" letter-spacing="2" fill="#f2efe6">BAR·TABAC</text>
+      <path d="M30 22 L40 37 L30 52 L20 37 Z" fill="none" stroke="#f1e7d0" stroke-width="1.5"/>
+      <text x="58" y="34" font-family="'Arial Narrow', Arial, sans-serif" font-weight="bold" font-size="20" letter-spacing="2" fill="#f1e7d0">BAR·TABAC</text>
       <text x="58" y="56" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#e8b23c">de l'Écluse</text>
     </svg>`,
   },
@@ -80,7 +80,7 @@ export const SPONSORS: Sponsor[] = [
       <path d="M30 20 L38 25 L38 35 L30 40 L22 35 L22 25 Z" fill="none" stroke="#101816" stroke-width="1.6"/>
       <circle cx="30" cy="58" r="3" fill="#eab72c"/>
       <text x="56" y="36" font-family="'Bricolage Grotesque', sans-serif" font-weight="800" font-size="22" fill="#eab72c">MIEL &amp; Cie</text>
-      <text x="56" y="56" font-family="'Instrument Sans', sans-serif" font-size="12" letter-spacing="3" fill="#f2efe6">DU GÂTINAIS</text>
+      <text x="56" y="56" font-family="'Instrument Sans', sans-serif" font-size="12" letter-spacing="3" fill="#f1e7d0">DU GÂTINAIS</text>
     </svg>`,
   },
   {
@@ -88,13 +88,13 @@ export const SPONSORS: Sponsor[] = [
     title: 'Centre officiel de récupération',
     svg: `<svg viewBox="0 0 240 74" role="img" aria-label="Piscine Municipale, bassin privé du 591 Les Brins">
       <rect x="12" y="12" width="50" height="50" rx="10" fill="#4fb7d8"/>
-      <g fill="none" stroke="#f2efe6" stroke-width="3" stroke-linecap="round">
+      <g fill="none" stroke="#f1e7d0" stroke-width="3" stroke-linecap="round">
         <path d="M20 28 q6 -5 12 0 t12 0 t10 0"/>
         <path d="M20 38 q6 -5 12 0 t12 0 t10 0"/>
         <path d="M20 48 q6 -5 12 0 t12 0 t10 0"/>
       </g>
       <text x="74" y="32" font-family="'Instrument Sans', sans-serif" font-weight="600" font-size="16" letter-spacing="1.5" fill="#4fb7d8">PISCINE MUNICIPALE</text>
-      <text x="74" y="50" font-family="'Spline Sans Mono', monospace" font-size="9.5" letter-spacing="1" fill="#f2efe6">bassin privé — 591 Les Brins</text>
+      <text x="74" y="50" font-family="'Spline Sans Mono', monospace" font-size="9.5" letter-spacing="1" fill="#f1e7d0">bassin privé — 591 Les Brins</text>
     </svg>`,
   },
 ];

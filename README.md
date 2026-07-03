@@ -45,6 +45,21 @@ Si BRouter/Nominatim sont injoignables, le script bascule en mode `fallback`
 (splines lissées entre les villes-étapes, stats estimées) et le note dans
 `meta.json`.
 
+### Photos des points d'intérêt
+
+`node scripts/fetch-poi-images.mjs` récupère l'image principale de l'article
+Wikipédia (fr) de chaque POI (photos Wikimédia Commons, crédit global dans le
+footer), redimensionnées ensuite à 900 px dans `public/poi/`. Le manifeste
+`src/data/poi-images.json` associe chaque POI à son fichier ; mettre `null`
+pour masquer une photo, ou remplacer le fichier par une meilleure prise de vue.
+
+### Logo
+
+Le badge officiel (`public/logo.png`, favicon dérivé `public/favicon.png`)
+est fourni par l'organisation — recadré en cercle sur fond transparent depuis
+l'illustration source. La palette du site en découle : marine `#0f2138`,
+crème `#f1e7d0`, or `#e4a93d`, orange `#de7b3e`, ciel `#77b9e0`.
+
 ### Écarts assumés par rapport au cahier des charges initial
 
 Le cahier imposait 78–105 km par étape ; trois ajustements de tracé ont été
