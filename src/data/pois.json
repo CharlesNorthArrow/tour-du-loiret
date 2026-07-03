@@ -1,0 +1,128 @@
+[
+  {
+    "stage": 1,
+    "id": "donjon-chateau-renard",
+    "name": "Donjon de Château-Renard",
+    "cat": "Patrimoine",
+    "lat": 47.93163,
+    "lon": 2.92691,
+    "copy": "Contrôle signature au pied du donjon. Les commissaires seront intraitables."
+  },
+  {
+    "stage": 1,
+    "id": "amphitheatre-montbouy",
+    "name": "Amphithéâtre gallo-romain de Montbouy",
+    "cat": "Patrimoine",
+    "lat": 47.86173,
+    "lon": 2.82085,
+    "copy": "2 000 ans de spectateurs. Aucun n'a vu passer un peloton aussi rapide."
+  },
+  {
+    "stage": 1,
+    "id": "canal-briare",
+    "name": "Canal de Briare — chemin de halage",
+    "cat": "Patrimoine",
+    "lat": 47.845,
+    "lon": 2.838,
+    "copy": "Ouvert en 1642, doyen des canaux de France. Le peloton est prié de rouler plus vite que l’eau."
+  },
+  {
+    "stage": 1,
+    "id": "sept-ecluses-rogny",
+    "name": "Les Sept Écluses de Rogny",
+    "cat": "Point de vue",
+    "lat": 47.74216,
+    "lon": 2.88095,
+    "copy": "Escalier d'eau du XVIIᵉ siècle. Demi-tour officiel au bassin, ravitaillement café autorisé. Classé. Comme vous, bientôt."
+  },
+  {
+    "stage": 1,
+    "id": "chatillon-coligny",
+    "name": "Châtillon-Coligny",
+    "cat": "Ravitaillement",
+    "lat": 47.82264,
+    "lon": 2.84816,
+    "copy": "Village étape. Boulangerie stratégique."
+  },
+  {
+    "stage": 2,
+    "id": "abbaye-ferrieres",
+    "name": "Abbaye de Ferrières-en-Gâtinais",
+    "cat": "Patrimoine",
+    "lat": 48.09009,
+    "lon": 2.78961,
+    "copy": "Fondée au VIIᵉ siècle. Bénédiction du peloton non garantie."
+  },
+  {
+    "stage": 2,
+    "id": "foret-montargis",
+    "name": "Forêt de Montargis",
+    "cat": "Difficulté",
+    "lat": 48.03505,
+    "lon": 2.79335,
+    "copy": "4 000 hectares d'ombre. Secteur pavé de feuilles."
+  },
+  {
+    "stage": 2,
+    "id": "venise-gatinais",
+    "name": "Montargis, la Venise du Gâtinais",
+    "cat": "Patrimoine",
+    "lat": 47.99786,
+    "lon": 2.73101,
+    "copy": "131 ponts et passerelles. Interdiction formelle de tomber dans le canal."
+  },
+  {
+    "stage": 2,
+    "id": "canal-orleans",
+    "name": "Canal d'Orléans",
+    "cat": "Difficulté",
+    "lat": 47.94711,
+    "lon": 2.54188,
+    "copy": "Chemin de halage. Vent de face contractuel."
+  },
+  {
+    "stage": 2,
+    "id": "chateau-bellegarde",
+    "name": "Château de Bellegarde",
+    "cat": "Point de vue",
+    "lat": 47.98699,
+    "lon": 2.44177,
+    "copy": "Demi-tour officiel devant les douves. Photo protocolaire."
+  },
+  {
+    "stage": 3,
+    "id": "vallee-ouanne",
+    "name": "Vallée de l'Ouanne",
+    "cat": "Difficulté",
+    "lat": 47.93979,
+    "lon": 2.98722,
+    "copy": "Succession de bosses. Le règlement parle de « moyenne montagne »."
+  },
+  {
+    "stage": 3,
+    "id": "charny-oree",
+    "name": "Charny-Orée-de-Puisaye",
+    "cat": "Ravitaillement",
+    "lat": 47.87854,
+    "lon": 3.10592,
+    "copy": "Point le plus oriental de l'épreuve. Frontière de l'Yonne. Passeport non requis."
+  },
+  {
+    "stage": 3,
+    "id": "cote-prunoy",
+    "name": "Côte de Prunoy",
+    "cat": "Difficulté",
+    "lat": 47.91283,
+    "lon": 3.12905,
+    "copy": "Difficulté classée hors catégorie (par nous)."
+  },
+  {
+    "stage": 3,
+    "id": "halles-courtenay",
+    "name": "Halles de Courtenay",
+    "cat": "Ravitaillement",
+    "lat": 48.03944,
+    "lon": 3.06188,
+    "copy": "Dernier ravitaillement avant l'arrivée. Sprint intermédiaire au panneau d'entrée."
+  }
+]

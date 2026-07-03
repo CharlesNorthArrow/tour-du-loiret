@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour du Loiret · Édition 2026 — L'épreuve reine du Gâtinais</title>
+  <meta name="description" content="Tour du Loiret 2026 — 3 étapes, 3 boucles au départ de Louzouer. Épreuve non homologuée. L'épreuve reine du Gâtinais." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="map" aria-hidden="true"></div>
+  <div class="map-dim" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="site-header__brand" href="#hero" aria-label="Tour du Loiret — retour en haut">
+      <img src="/logo.svg" alt="" width="44" height="44" />
+      <span class="site-header__word">Tour du Loiret <em>MMXXVI</em></span>
+    </a>
+  </header>
+
+  <main id="scrolly">
+
+    <!-- ══ Section 0 · Hero ══ -->
+    <section class="hero step" id="hero" data-action="hero" aria-label="Tour du Loiret 2026">
+      <div class="hero__inner">
+        <img class="hero__logo" src="/logo.svg" alt="Badge officiel du Tour du Loiret : roue-boussole, épis de blé et canal" width="148" height="148" />
+        <p class="eyebrow hero__eyebrow">28 · 29 · 30 août 2026 — Grand Départ : Louzouer</p>
+        <h1 class="hero__title">Tour <span>du</span> Loiret</h1>
+        <p class="hero__tagline">« L'épreuve reine du Gâtinais »</p>
+        <p class="hero__strip" role="doc-subtitle">
+          Épreuve non homologuée&nbsp;· 3 étapes&nbsp;· 1 seul vainqueur&nbsp;: l'amitié <span class="hero__strip-joke">(et Bastien, probablement)</span>
+        </p>
+      </div>
+      <p class="hero__cue" aria-hidden="true">
+        Faites défiler pour reconnaître le parcours
+        <svg viewBox="0 0 16 10" width="16" height="10"><path d="M1 1l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </p>
+    </section>
+
+    <!-- ══ Section 1 · Vue d'ensemble ══ -->
+    <section class="overview step" id="parcours" data-action="overview" aria-label="Le parcours">
+      <div class="overview__panel card">
+        <div class="overview__top">
+          <div>
+            <p class="eyebrow">Le parcours</p>
+            <h2>Trois boucles,<br />un seul village départ</h2>
+          </div>
+          <dl class="statstrip" id="statstrip">
+            <div><dt>Distance totale</dt><dd><span class="num" data-count data-suffix=" km">0</span></dd></div>
+            <div><dt>Dénivelé positif</dt><dd><span class="num" data-count data-suffix=" m">0</span></dd></div>
+            <div><dt>Étapes</dt><dd><span class="num" data-count data-suffix="">0</span></dd></div>
+            <div><dt>Route nationale</dt><dd><span class="num">0</span></dd></div>
+          </dl>
+        </div>
+        <nav class="stagecards" id="stagecards" aria-label="Les trois étapes"><!-- rempli par main.ts --></nav>
+      </div>
+    </section>
+
+    <!-- ══ Sections 2–4 · Étapes (générées par main.ts) ══ -->
+    <div id="stages"></div>
+
+    <!-- ══ Section 5 · Le Programme ══ -->
+    <section class="wide step" id="programme" data-action="calm" aria-labelledby="programme-title">
+      <div class="card wide__card">
+        <p class="eyebrow">Communiqué N°&nbsp;1 — Direction de course</p>
+        <h2 id="programme-title">Le Programme</h2>
+        <div class="programme">
+          <article>
+            <h3>Vendredi 28 août<span>Étape 1 — Les Sept Écluses</span></h3>
+            <dl>
+              <div><dt>08h15</dt><dd>Contrôle des vélos et des excuses</dd></div>
+              <div><dt>08h30</dt><dd>Départ fictif</dd></div>
+              <div><dt>08h47</dt><dd>Départ réel, après le deuxième café</dd></div>
+              <div><dt>10h45</dt><dd>Ravitaillement officiel, bassin de Rogny</dd></div>
+              <div><dt>13h00</dt><dd>Arrivée, Les Brins</dd></div>
+              <div><dt>13h30</dt><dd><strong>Repos du Coureur (obligatoire)</strong> — piscine, sieste, pétanque</dd></div>
+              <div><dt>19h00</dt><dd>Apéro de récupération, briefing d'étape</dd></div>
+            </dl>
+          </article>
+          <article>
+            <h3>Samedi 29 août<span>Étape 2 — La Royale du Gâtinais</span></h3>
+            <dl>
+              <div><dt>08h30</dt><dd>Départ fictif</dd></div>
+              <div><dt>08h47</dt><dd>Départ réel, protocole café inchangé</dd></div>
+              <div><dt>11h00</dt><dd>Photo protocolaire, douves de Bellegarde</dd></div>
+              <div><dt>13h00</dt><dd>Arrivée, Les Brins</dd></div>
+              <div><dt>13h30</dt><dd><strong>Repos du Coureur (obligatoire)</strong> — piscine, sieste, pétanque</dd></div>
+              <div><dt>19h00</dt><dd>Apéro de récupération, réclamations irrecevables</dd></div>
+            </dl>
+          </article>
+          <article>
+            <h3>Dimanche 30 août<span>Étape 3 — La Bosse de l'Ouanne</span></h3>
+            <dl>
+              <div><dt>08h30</dt><dd>Départ fictif</dd></div>
+              <div><dt>08h47</dt><dd>Départ réel, tradition désormais séculaire</dd></div>
+              <div><dt>10h30</dt><dd>Sprint intermédiaire, panneau de Courtenay</dd></div>
+              <div><dt>13h00</dt><dd>Arrivée finale, Les Brins</dd></div>
+              <div><dt>13h30</dt><dd><strong>Repos du Coureur (obligatoire)</strong> — piscine, sieste, pétanque</dd></div>
+              <div><dt>18h00</dt><dd>Palmarès, remise des maillots, discours du Directeur de Course</dd></div>
+              <div><dt>19h00</dt><dd>Apéro de clôture, dit « de non-récupération »</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Section 6 · Inscription ══ -->
+    <section class="wide step" id="inscription" data-action="calm" aria-labelledby="inscription-title">
+      <div class="wide__head card card--slim">
+        <p class="eyebrow">Engagement 2026</p>
+        <h2 id="inscription-title">Inscription</h2>
+        <p>Trois formules au choix. La Commission Sportive de Louzouer garantit une stricte égalité de traitement.</p>
+      </div>
+      <div class="tiers" id="tiers">
+        <article class="card tier">
+          <h3>Formule<br />Cyclotouriste</h3>
+          <p class="tier__price"><span class="num">0&nbsp;€</span><span>+ une bouteille pour la cave du directeur de course</span></p>
+          <p class="tier__desc">3 étapes, hébergement au village départ, ravitaillement complet, assistance morale.</p>
+          <button class="btn" type="button" data-tier="Cyclotouriste">Choisir cette formule</button>
+        </article>
+        <article class="card tier">
+          <h3>Formule<br />Grimpeur Confirmé</h3>
+          <p class="tier__price"><span class="num">0&nbsp;€</span><span>+ une bouteille pour la cave du directeur de course</span></p>
+          <p class="tier__desc">Les 3 mêmes étapes, le même hébergement, le même ravitaillement, la même assistance morale.</p>
+          <button class="btn" type="button" data-tier="Grimpeur Confirmé">Choisir cette formule</button>
+        </article>
+        <article class="card tier">
+          <h3>Formule<br />Légende du Gâtinais</h3>
+          <p class="tier__price"><span class="num">0&nbsp;€</span><span>+ une bouteille pour la cave du directeur de course</span></p>
+          <p class="tier__desc">Strictement identique aux deux précédentes, mais vous pourrez le raconter différemment.</p>
+          <button class="btn" type="button" data-tier="Légende du Gâtinais">Choisir cette formule</button>
+        </article>
+      </div>
+      <div class="card confirm" id="confirm" role="status" aria-live="polite" hidden>
+        <p class="eyebrow">Dossier n° 2026-<span id="confirm-no">001</span></p>
+        <h3>Inscription transmise à la Commission Sportive de Louzouer.</h3>
+        <p>Délai de traitement&nbsp;: immédiat. Vous êtes engagé·e — <strong id="confirm-tier"></strong>.</p>
+        <a class="btn" id="confirm-mail" href="#">Confirmer auprès du Directeur de Course</a>
+      </div>
+    </section>
+
+    <!-- ══ Section 7 · Partenaires ══ -->
+    <section class="wide step" id="partenaires" data-action="calm" aria-labelledby="partenaires-title">
+      <div class="wide__head card card--slim">
+        <p class="eyebrow">Ils rendent l'épreuve possible</p>
+        <h2 id="partenaires-title">Partenaires Officiels</h2>
+      </div>
+      <ul class="sponsors" id="sponsors"><!-- rempli par main.ts --></ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Épreuve non homologuée FFC. Ouvert sur invitation uniquement. Le port du casque est obligatoire, le port du maillot à pois est mérité. Tout abandon devra être justifié devant la Commission.</p>
+    <p>© Tour du Loiret 2026 — Louzouer, Loiret.</p>
+  </footer>
+
+  <noscript><p class="noscript">Ce site trace des parcours sur une carte interactive et nécessite JavaScript. Le peloton vous prie de l'activer.</p></noscript>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

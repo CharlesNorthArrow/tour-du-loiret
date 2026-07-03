@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Tour du Loiret — Grand Départ Louzouer MMXXVI">
+  <defs>
+    <path id="arc-top" d="M 17 100 A 83 83 0 0 1 183 100" fill="none"/>
+    <path id="arc-bottom" d="M 17 100 A 83 83 0 0 0 183 100" fill="none"/>
+    <clipPath id="wheel-clip"><circle cx="100" cy="100" r="52"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#F2EFE6">
+    <circle cx="100" cy="100" r="97" stroke-width="2.5"/>
+    <circle cx="100" cy="100" r="71" stroke-width="1.25"/>
+  </g>
+  <circle cx="17" cy="100" r="2.2" fill="#F2EFE6"/>
+  <circle cx="183" cy="100" r="2.2" fill="#F2EFE6"/>
+  <text font-family="'Bricolage Grotesque','Arial Black',Arial,sans-serif" font-weight="700" font-size="16.5" letter-spacing="4" fill="#F2EFE6">
+    <textPath href="#arc-top" startOffset="50%" text-anchor="middle">TOUR DU LOIRET</textPath>
+  </text>
+  <text font-family="'Bricolage Grotesque','Arial Black',Arial,sans-serif" font-weight="600" font-size="7.6" letter-spacing="1.5" fill="#F2EFE6">
+    <textPath href="#arc-bottom" startOffset="50%" text-anchor="middle">GRAND DÉPART LOUZOUER · MMXXVI</textPath>
+  </text>
+  <!-- blés croisés + canal, derrière la roue -->
+  <g clip-path="url(#wheel-clip)" stroke="#F2EFE6" fill="#F2EFE6" opacity="0.8">
+    <path d="M 68 144 Q 84 118 98 88" fill="none" stroke-width="2"/>
+    <path d="M 132 144 Q 116 118 102 88" fill="none" stroke-width="2"/>
+    <g stroke="none">
+      <ellipse cx="90" cy="105" rx="4.2" ry="2" transform="rotate(-58 90 105)"/>
+      <ellipse cx="84" cy="116" rx="4.2" ry="2" transform="rotate(-55 84 116)"/>
+      <ellipse cx="78" cy="127" rx="4.2" ry="2" transform="rotate(-52 78 127)"/>
+      <ellipse cx="110" cy="105" rx="4.2" ry="2" transform="rotate(58 110 105)"/>
+      <ellipse cx="116" cy="116" rx="4.2" ry="2" transform="rotate(55 116 116)"/>
+      <ellipse cx="122" cy="127" rx="4.2" ry="2" transform="rotate(52 122 127)"/>
+    </g>
+    <path d="M 46 132 q 6 -5 12 0 t 12 0 t 12 0 t 12 0 t 12 0 t 12 0 t 12 0 t 12 0 t 12 0" fill="none" stroke-width="2"/>
+  </g>
+  <!-- roue-boussole -->
+  <g stroke="#F2EFE6" fill="none">
+    <circle cx="100" cy="100" r="54" stroke-width="3.5"/>
+    <circle cx="100" cy="100" r="49" stroke-width="1.2"/>
+    <g stroke-width="3">
+      <line x1="100" y1="100" x2="151" y2="100"/>
+      <line x1="100" y1="100" x2="100" y2="151"/>
+      <line x1="100" y1="100" x2="49" y2="100"/>
+    </g>
+    <g stroke-width="1.8">
+      <line x1="100" y1="100" x2="128.3" y2="71.7"/>
+      <line x1="100" y1="100" x2="128.3" y2="128.3"/>
+      <line x1="100" y1="100" x2="71.7" y2="128.3"/>
+      <line x1="100" y1="100" x2="71.7" y2="71.7"/>
+    </g>
+  </g>
+  <!-- flèche nord -->
+  <path d="M 100 47 L 91 94 L 100 89 Z" fill="#F2EFE6"/>
+  <path d="M 100 47 L 109 94 L 100 89 Z" fill="none" stroke="#F2EFE6" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="100" cy="100" r="5.5" fill="#F2EFE6"/>
+</svg>
