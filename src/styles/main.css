@@ -274,6 +274,31 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
 
 .stagecards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 
+.methode {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 8px 36px;
+  align-items: start;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--chalk-12);
+}
+
+.methode h3 {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.methode p {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--chalk-70);
+  columns: 2;
+  column-gap: 28px;
+}
+
 .stagecard {
   display: block;
   padding: 13px 16px 14px;
@@ -803,6 +828,8 @@ h2 { font-size: clamp(26px, 3.2vw, 38px); font-weight: 700; letter-spacing: -0.0
 @media (max-width: 960px) {
   .overview__top { grid-template-columns: 1fr; align-items: start; }
   .statstrip { grid-template-columns: repeat(2, 1fr); gap: 14px 24px; }
+  .methode { grid-template-columns: 1fr; }
+  .methode p { columns: 1; }
   .stagecards { grid-template-columns: 1fr; }
   .programme { grid-template-columns: 1fr; }
   .tiers { grid-template-columns: 1fr; }

@@ -248,7 +248,14 @@ export class RaceMap {
       return { top: 90, left: 28, right: 28, bottom: kind === 'even' ? 90 : Math.round(h * 0.44) };
     }
     if (kind === 'column') return { top: 100, bottom: 70, left: 80, right: 100 + 460 };
-    if (kind === 'panel') return { top: 96, bottom: Math.min(Math.round(h * 0.48), 380), left: 90, right: 90 };
+    if (kind === 'panel') {
+      // Réserve sous la caméra la hauteur réelle du panneau « Le Parcours »
+      // (12 vh de marge de section + un liseré), pour que les trois boucles
+      // restent visibles au-dessus.
+      const panel = document.querySelector<HTMLElement>('.overview__panel');
+      const reserve = panel ? panel.offsetHeight + Math.round(h * 0.12) + 20 : 380;
+      return { top: 96, bottom: Math.min(Math.round(h * 0.62), reserve), left: 90, right: 90 };
+    }
     return { top: 110, bottom: 110, left: 110, right: 110 };
   }
 
